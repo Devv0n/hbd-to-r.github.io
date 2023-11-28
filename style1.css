@@ -1,0 +1,3052 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  background: #1c1f36;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  position: absolute;
+}
+
+*:before,
+*:after {
+  content: "";
+  position: absolute;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cake {
+  width: 80%;
+  height: 80%;
+  left: 10%;
+  bottom: 15%;
+}
+
+.filling {
+  height: 10px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 50%;
+}
+
+.tier {
+  left: 10%;
+  width: 80%;
+  height: 50px;
+  border-radius: 5px;
+}
+.tier .icing-group {
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+}
+.tier .icing-group .icing {
+  border-radius: 0 0 20px 20px;
+  width: 40px;
+  height: 20px;
+  background-color: #f4f5fb;
+}
+.tier:after {
+  border-radius: 0 5px 5px 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.tier-1 {
+  background-color: #f2abe7;
+  bottom: 0;
+}
+.tier-1 .filling {
+  background-color: #eb7fda;
+}
+
+.tier-2 {
+  bottom: 50px;
+  width: 60%;
+  height: 45px;
+  left: 20%;
+  background-color: #9fa3ec;
+}
+.tier-2 .filling {
+  background-color: #747ae4;
+}
+
+.tier-3 {
+  bottom: 95px;
+  width: 40%;
+  height: 40px;
+  left: 30%;
+  background-color: #86d2e1;
+}
+.tier-3 .filling {
+  background-color: #5dc3d7;
+}
+
+.icing:nth-child(1) {
+  left: -20px;
+}
+
+.icing:nth-child(2) {
+  left: 10px;
+}
+
+.icing:nth-child(3) {
+  left: 40px;
+}
+
+.icing:nth-child(4) {
+  left: 70px;
+}
+
+.icing:nth-child(5) {
+  left: 100px;
+}
+
+.icing:nth-child(6) {
+  left: 130px;
+}
+
+.icing:nth-child(7) {
+  left: 160px;
+}
+
+.icing:nth-child(8) {
+  left: 190px;
+}
+
+.icing:nth-child(9) {
+  left: 220px;
+}
+
+.candles {
+  width: 40%;
+  left: 30%;
+  height: 30px;
+  bottom: 135px;
+}
+.candles .candle {
+  background-color: #f2abe7;
+  left: 27px;
+  width: 10px;
+  height: 25px;
+  bottom: 0;
+}
+.candles .candle:after {
+  width: 50%;
+  height: 100%;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.candles .candle .flame {
+  width: 15px;
+  height: 15px;
+  bottom: 30px;
+  left: -3px;
+}
+.candles .candle .flame .flame-in {
+  width: 100%;
+  height: 100%;
+  background-color: #fec31e;
+  border-radius: 0 50% 50%;
+  transform: rotate(45deg);
+  -webkit-animation: flame 2s linear infinite;
+          animation: flame 2s linear infinite;
+}
+
+@-webkit-keyframes flame {
+  50% {
+    transform: scale(0.8) rotate(45deg);
+  }
+}
+
+@keyframes flame {
+  50% {
+    transform: scale(0.8) rotate(45deg);
+  }
+}
+.confetti {
+  position: absolute;
+  z-index: 999;
+}
+
+.confetti .rotate {
+  -webkit-animation: driftRotate 1s infinite both ease-in-out;
+          animation: driftRotate 1s infinite both ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.confetti .askew {
+  width: 100%;
+  height: 100%;
+  -webkit-animation: drift 1s infinite alternate both ease-in-out;
+          animation: drift 1s infinite alternate both ease-in-out;
+}
+
+.confetti:nth-child(0) .askew {
+  -webkit-animation-duration: 1.14s;
+          animation-duration: 1.14s;
+  -webkit-animation-delay: -0.912s;
+          animation-delay: -0.912s;
+}
+
+.confetti:nth-child(0) .rotate {
+  -webkit-animation-duration: 1.27s;
+          animation-duration: 1.27s;
+  -webkit-animation-delay: -0.4191s;
+          animation-delay: -0.4191s;
+}
+
+.confetti:nth-child(1) .askew {
+  -webkit-animation-duration: 1.72s;
+          animation-duration: 1.72s;
+  -webkit-animation-delay: -0.8772s;
+          animation-delay: -0.8772s;
+}
+
+.confetti:nth-child(1) .rotate {
+  -webkit-animation-duration: 1.17s;
+          animation-duration: 1.17s;
+  -webkit-animation-delay: -0.5499s;
+          animation-delay: -0.5499s;
+}
+
+.confetti:nth-child(2) .askew {
+  -webkit-animation-duration: 1.21s;
+          animation-duration: 1.21s;
+  -webkit-animation-delay: -0.968s;
+          animation-delay: -0.968s;
+}
+
+.confetti:nth-child(2) .rotate {
+  -webkit-animation-duration: 1.18s;
+          animation-duration: 1.18s;
+  -webkit-animation-delay: -0.1416s;
+          animation-delay: -0.1416s;
+}
+
+.confetti:nth-child(3) .askew {
+  -webkit-animation-duration: 1.01s;
+          animation-duration: 1.01s;
+  -webkit-animation-delay: -0.9898s;
+          animation-delay: -0.9898s;
+}
+
+.confetti:nth-child(3) .rotate {
+  -webkit-animation-duration: 1.65s;
+          animation-duration: 1.65s;
+  -webkit-animation-delay: -0.1155s;
+          animation-delay: -0.1155s;
+}
+
+.confetti:nth-child(4) .askew {
+  -webkit-animation-duration: 1.09s;
+          animation-duration: 1.09s;
+  -webkit-animation-delay: -0.981s;
+          animation-delay: -0.981s;
+}
+
+.confetti:nth-child(4) .rotate {
+  -webkit-animation-duration: 1.12s;
+          animation-duration: 1.12s;
+  -webkit-animation-delay: -0.224s;
+          animation-delay: -0.224s;
+}
+
+.confetti:nth-child(5) .askew {
+  -webkit-animation-duration: 1.56s;
+          animation-duration: 1.56s;
+  -webkit-animation-delay: -1.1388s;
+          animation-delay: -1.1388s;
+}
+
+.confetti:nth-child(5) .rotate {
+  -webkit-animation-duration: 1.9s;
+          animation-duration: 1.9s;
+  -webkit-animation-delay: -0.342s;
+          animation-delay: -0.342s;
+}
+
+.confetti:nth-child(6) .askew {
+  -webkit-animation-duration: 1.37s;
+          animation-duration: 1.37s;
+  -webkit-animation-delay: -0.5206s;
+          animation-delay: -0.5206s;
+}
+
+.confetti:nth-child(6) .rotate {
+  -webkit-animation-duration: 1.93s;
+          animation-duration: 1.93s;
+  -webkit-animation-delay: -1.737s;
+          animation-delay: -1.737s;
+}
+
+.confetti:nth-child(7) .askew {
+  -webkit-animation-duration: 1.67s;
+          animation-duration: 1.67s;
+  -webkit-animation-delay: -0.2839s;
+          animation-delay: -0.2839s;
+}
+
+.confetti:nth-child(7) .rotate {
+  -webkit-animation-duration: 1.18s;
+          animation-duration: 1.18s;
+  -webkit-animation-delay: -0.059s;
+          animation-delay: -0.059s;
+}
+
+.confetti:nth-child(8) .askew {
+  -webkit-animation-duration: 1.07s;
+          animation-duration: 1.07s;
+  -webkit-animation-delay: -0.9095s;
+          animation-delay: -0.9095s;
+}
+
+.confetti:nth-child(8) .rotate {
+  -webkit-animation-duration: 1.86s;
+          animation-duration: 1.86s;
+  -webkit-animation-delay: -0.2604s;
+          animation-delay: -0.2604s;
+}
+
+.confetti:nth-child(9) .askew {
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+  -webkit-animation-delay: -1.656s;
+          animation-delay: -1.656s;
+}
+
+.confetti:nth-child(9) .rotate {
+  -webkit-animation-duration: 1.64s;
+          animation-duration: 1.64s;
+  -webkit-animation-delay: -0.0164s;
+          animation-delay: -0.0164s;
+}
+
+.confetti:nth-child(10) .askew {
+  -webkit-animation-duration: 1.88s;
+          animation-duration: 1.88s;
+  -webkit-animation-delay: -0.47s;
+          animation-delay: -0.47s;
+}
+
+.confetti:nth-child(10) .rotate {
+  -webkit-animation-duration: 1.84s;
+          animation-duration: 1.84s;
+  -webkit-animation-delay: -1.6376s;
+          animation-delay: -1.6376s;
+}
+
+.confetti:nth-child(11) .askew {
+  -webkit-animation-duration: 1.83s;
+          animation-duration: 1.83s;
+  -webkit-animation-delay: -0.4758s;
+          animation-delay: -0.4758s;
+}
+
+.confetti:nth-child(11) .rotate {
+  -webkit-animation-duration: 1.26s;
+          animation-duration: 1.26s;
+  -webkit-animation-delay: -0.2646s;
+          animation-delay: -0.2646s;
+}
+
+.confetti:nth-child(12) .askew {
+  -webkit-animation-duration: 1.24s;
+          animation-duration: 1.24s;
+  -webkit-animation-delay: -0.5704s;
+          animation-delay: -0.5704s;
+}
+
+.confetti:nth-child(12) .rotate {
+  -webkit-animation-duration: 1.54s;
+          animation-duration: 1.54s;
+  -webkit-animation-delay: -1.3244s;
+          animation-delay: -1.3244s;
+}
+
+.confetti:nth-child(13) .askew {
+  -webkit-animation-duration: 1.29s;
+          animation-duration: 1.29s;
+  -webkit-animation-delay: -0.4644s;
+          animation-delay: -0.4644s;
+}
+
+.confetti:nth-child(13) .rotate {
+  -webkit-animation-duration: 1.33s;
+          animation-duration: 1.33s;
+  -webkit-animation-delay: -0.9044s;
+          animation-delay: -0.9044s;
+}
+
+.confetti:nth-child(14) .askew {
+  -webkit-animation-duration: 1.14s;
+          animation-duration: 1.14s;
+  -webkit-animation-delay: -0.4902s;
+          animation-delay: -0.4902s;
+}
+
+.confetti:nth-child(14) .rotate {
+  -webkit-animation-duration: 1.85s;
+          animation-duration: 1.85s;
+  -webkit-animation-delay: -0.2035s;
+          animation-delay: -0.2035s;
+}
+
+.confetti:nth-child(15) .askew {
+  -webkit-animation-duration: 1.63s;
+          animation-duration: 1.63s;
+  -webkit-animation-delay: -0.9617s;
+          animation-delay: -0.9617s;
+}
+
+.confetti:nth-child(15) .rotate {
+  -webkit-animation-duration: 1.75s;
+          animation-duration: 1.75s;
+  -webkit-animation-delay: -1.26s;
+          animation-delay: -1.26s;
+}
+
+.confetti:nth-child(16) .askew {
+  -webkit-animation-duration: 1.17s;
+          animation-duration: 1.17s;
+  -webkit-animation-delay: -0.1521s;
+          animation-delay: -0.1521s;
+}
+
+.confetti:nth-child(16) .rotate {
+  -webkit-animation-duration: 1.98s;
+          animation-duration: 1.98s;
+  -webkit-animation-delay: -1.98s;
+          animation-delay: -1.98s;
+}
+
+.confetti:nth-child(17) .askew {
+  -webkit-animation-duration: 1.74s;
+          animation-duration: 1.74s;
+  -webkit-animation-delay: -1.305s;
+          animation-delay: -1.305s;
+}
+
+.confetti:nth-child(17) .rotate {
+  -webkit-animation-duration: 1.53s;
+          animation-duration: 1.53s;
+  -webkit-animation-delay: -0.918s;
+          animation-delay: -0.918s;
+}
+
+.confetti:nth-child(18) .askew {
+  -webkit-animation-duration: 1.22s;
+          animation-duration: 1.22s;
+  -webkit-animation-delay: -0.2196s;
+          animation-delay: -0.2196s;
+}
+
+.confetti:nth-child(18) .rotate {
+  -webkit-animation-duration: 1.51s;
+          animation-duration: 1.51s;
+  -webkit-animation-delay: -1.4647s;
+          animation-delay: -1.4647s;
+}
+
+.confetti:nth-child(19) .askew {
+  -webkit-animation-duration: 1.32s;
+          animation-duration: 1.32s;
+  -webkit-animation-delay: -0.3036s;
+          animation-delay: -0.3036s;
+}
+
+.confetti:nth-child(19) .rotate {
+  -webkit-animation-duration: 1.9s;
+          animation-duration: 1.9s;
+  -webkit-animation-delay: -0.361s;
+          animation-delay: -0.361s;
+}
+
+.confetti:nth-child(20) .askew {
+  -webkit-animation-duration: 1.42s;
+          animation-duration: 1.42s;
+  -webkit-animation-delay: -0.6958s;
+          animation-delay: -0.6958s;
+}
+
+.confetti:nth-child(20) .rotate {
+  -webkit-animation-duration: 1.72s;
+          animation-duration: 1.72s;
+  -webkit-animation-delay: -0.1376s;
+          animation-delay: -0.1376s;
+}
+
+.confetti:nth-child(21) .askew {
+  -webkit-animation-duration: 1.94s;
+          animation-duration: 1.94s;
+  -webkit-animation-delay: -1.746s;
+          animation-delay: -1.746s;
+}
+
+.confetti:nth-child(21) .rotate {
+  -webkit-animation-duration: 1.02s;
+          animation-duration: 1.02s;
+  -webkit-animation-delay: -0.5712s;
+          animation-delay: -0.5712s;
+}
+
+.confetti:nth-child(22) .askew {
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
+  -webkit-animation-delay: -1.034s;
+          animation-delay: -1.034s;
+}
+
+.confetti:nth-child(22) .rotate {
+  -webkit-animation-duration: 1.67s;
+          animation-duration: 1.67s;
+  -webkit-animation-delay: -0.6179s;
+          animation-delay: -0.6179s;
+}
+
+.confetti:nth-child(23) .askew {
+  -webkit-animation-duration: 1.99s;
+          animation-duration: 1.99s;
+  -webkit-animation-delay: -0.5771s;
+          animation-delay: -0.5771s;
+}
+
+.confetti:nth-child(23) .rotate {
+  -webkit-animation-duration: 1.73s;
+          animation-duration: 1.73s;
+  -webkit-animation-delay: -1.384s;
+          animation-delay: -1.384s;
+}
+
+.confetti:nth-child(24) .askew {
+  -webkit-animation-duration: 1.63s;
+          animation-duration: 1.63s;
+  -webkit-animation-delay: -0.7498s;
+          animation-delay: -0.7498s;
+}
+
+.confetti:nth-child(24) .rotate {
+  -webkit-animation-duration: 1.53s;
+          animation-duration: 1.53s;
+  -webkit-animation-delay: -1.3158s;
+          animation-delay: -1.3158s;
+}
+
+.confetti:nth-child(25) .askew {
+  -webkit-animation-duration: 1.46s;
+          animation-duration: 1.46s;
+  -webkit-animation-delay: -1.2848s;
+          animation-delay: -1.2848s;
+}
+
+.confetti:nth-child(25) .rotate {
+  -webkit-animation-duration: 1.46s;
+          animation-duration: 1.46s;
+  -webkit-animation-delay: -1.3286s;
+          animation-delay: -1.3286s;
+}
+
+.confetti:nth-child(26) .askew {
+  -webkit-animation-duration: 1.66s;
+          animation-duration: 1.66s;
+  -webkit-animation-delay: -0.5644s;
+          animation-delay: -0.5644s;
+}
+
+.confetti:nth-child(26) .rotate {
+  -webkit-animation-duration: 1.18s;
+          animation-duration: 1.18s;
+  -webkit-animation-delay: -0.7198s;
+          animation-delay: -0.7198s;
+}
+
+.confetti:nth-child(27) .askew {
+  -webkit-animation-duration: 1.44s;
+          animation-duration: 1.44s;
+  -webkit-animation-delay: -0.1296s;
+          animation-delay: -0.1296s;
+}
+
+.confetti:nth-child(27) .rotate {
+  -webkit-animation-duration: 1.63s;
+          animation-duration: 1.63s;
+  -webkit-animation-delay: -1.1084s;
+          animation-delay: -1.1084s;
+}
+
+.confetti:nth-child(28) .askew {
+  -webkit-animation-duration: 1.24s;
+          animation-duration: 1.24s;
+  -webkit-animation-delay: -0.0744s;
+          animation-delay: -0.0744s;
+}
+
+.confetti:nth-child(28) .rotate {
+  -webkit-animation-duration: 1.45s;
+          animation-duration: 1.45s;
+  -webkit-animation-delay: -0.3335s;
+          animation-delay: -0.3335s;
+}
+
+.confetti:nth-child(29) .askew {
+  -webkit-animation-duration: 1.22s;
+          animation-duration: 1.22s;
+  -webkit-animation-delay: -1.1346s;
+          animation-delay: -1.1346s;
+}
+
+.confetti:nth-child(29) .rotate {
+  -webkit-animation-duration: 1.05s;
+          animation-duration: 1.05s;
+  -webkit-animation-delay: -0.714s;
+          animation-delay: -0.714s;
+}
+
+.confetti:nth-child(30) .askew {
+  -webkit-animation-duration: 1.43s;
+          animation-duration: 1.43s;
+  -webkit-animation-delay: -0.6435s;
+          animation-delay: -0.6435s;
+}
+
+.confetti:nth-child(30) .rotate {
+  -webkit-animation-duration: 1.42s;
+          animation-duration: 1.42s;
+  -webkit-animation-delay: -0.9372s;
+          animation-delay: -0.9372s;
+}
+
+.confetti:nth-child(31) .askew {
+  -webkit-animation-duration: 1.53s;
+          animation-duration: 1.53s;
+  -webkit-animation-delay: -0.0153s;
+          animation-delay: -0.0153s;
+}
+
+.confetti:nth-child(31) .rotate {
+  -webkit-animation-duration: 1.65s;
+          animation-duration: 1.65s;
+  -webkit-animation-delay: -0.1815s;
+          animation-delay: -0.1815s;
+}
+
+.confetti:nth-child(32) .askew {
+  -webkit-animation-duration: 1.51s;
+          animation-duration: 1.51s;
+  -webkit-animation-delay: -1.1325s;
+          animation-delay: -1.1325s;
+}
+
+.confetti:nth-child(32) .rotate {
+  -webkit-animation-duration: 1.79s;
+          animation-duration: 1.79s;
+  -webkit-animation-delay: -1.1098s;
+          animation-delay: -1.1098s;
+}
+
+.confetti:nth-child(33) .askew {
+  -webkit-animation-duration: 1.05s;
+          animation-duration: 1.05s;
+  -webkit-animation-delay: -0.8295s;
+          animation-delay: -0.8295s;
+}
+
+.confetti:nth-child(33) .rotate {
+  -webkit-animation-duration: 1.76s;
+          animation-duration: 1.76s;
+  -webkit-animation-delay: -0.3344s;
+          animation-delay: -0.3344s;
+}
+
+.confetti:nth-child(34) .askew {
+  -webkit-animation-duration: 1.09s;
+          animation-duration: 1.09s;
+  -webkit-animation-delay: -0.8284s;
+          animation-delay: -0.8284s;
+}
+
+.confetti:nth-child(34) .rotate {
+  -webkit-animation-duration: 1.99s;
+          animation-duration: 1.99s;
+  -webkit-animation-delay: -0.7164s;
+          animation-delay: -0.7164s;
+}
+
+.confetti:nth-child(35) .askew {
+  -webkit-animation-duration: 1.22s;
+          animation-duration: 1.22s;
+  -webkit-animation-delay: -0.9516s;
+          animation-delay: -0.9516s;
+}
+
+.confetti:nth-child(35) .rotate {
+  -webkit-animation-duration: 1.84s;
+          animation-duration: 1.84s;
+  -webkit-animation-delay: -0.8464s;
+          animation-delay: -0.8464s;
+}
+
+.confetti:nth-child(36) .askew {
+  -webkit-animation-duration: 1.63s;
+          animation-duration: 1.63s;
+  -webkit-animation-delay: -0.163s;
+          animation-delay: -0.163s;
+}
+
+.confetti:nth-child(36) .rotate {
+  -webkit-animation-duration: 1.14s;
+          animation-duration: 1.14s;
+  -webkit-animation-delay: -0.7068s;
+          animation-delay: -0.7068s;
+}
+
+.confetti:nth-child(37) .askew {
+  -webkit-animation-duration: 1.83s;
+          animation-duration: 1.83s;
+  -webkit-animation-delay: -1.0248s;
+          animation-delay: -1.0248s;
+}
+
+.confetti:nth-child(37) .rotate {
+  -webkit-animation-duration: 1.85s;
+          animation-duration: 1.85s;
+  -webkit-animation-delay: -0.333s;
+          animation-delay: -0.333s;
+}
+
+.confetti:nth-child(38) .askew {
+  -webkit-animation-duration: 1.44s;
+          animation-duration: 1.44s;
+  -webkit-animation-delay: -0.3456s;
+          animation-delay: -0.3456s;
+}
+
+.confetti:nth-child(38) .rotate {
+  -webkit-animation-duration: 1.55s;
+          animation-duration: 1.55s;
+  -webkit-animation-delay: -0.186s;
+          animation-delay: -0.186s;
+}
+
+.confetti:nth-child(39) .askew {
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-delay: -0.324s;
+          animation-delay: -0.324s;
+}
+
+.confetti:nth-child(39) .rotate {
+  -webkit-animation-duration: 1.71s;
+          animation-duration: 1.71s;
+  -webkit-animation-delay: -1.0773s;
+          animation-delay: -1.0773s;
+}
+
+.confetti:nth-child(40) .askew {
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+  -webkit-animation-delay: -1.296s;
+          animation-delay: -1.296s;
+}
+
+.confetti:nth-child(40) .rotate {
+  -webkit-animation-duration: 1.35s;
+          animation-duration: 1.35s;
+  -webkit-animation-delay: -1.2285s;
+          animation-delay: -1.2285s;
+}
+
+.confetti:nth-child(41) .askew {
+  -webkit-animation-duration: 1.54s;
+          animation-duration: 1.54s;
+  -webkit-animation-delay: -0.7238s;
+          animation-delay: -0.7238s;
+}
+
+.confetti:nth-child(41) .rotate {
+  -webkit-animation-duration: 1.63s;
+          animation-duration: 1.63s;
+  -webkit-animation-delay: -0.6683s;
+          animation-delay: -0.6683s;
+}
+
+.confetti:nth-child(42) .askew {
+  -webkit-animation-duration: 1.51s;
+          animation-duration: 1.51s;
+  -webkit-animation-delay: -1.1476s;
+          animation-delay: -1.1476s;
+}
+
+.confetti:nth-child(42) .rotate {
+  -webkit-animation-duration: 1.27s;
+          animation-duration: 1.27s;
+  -webkit-animation-delay: -0.7239s;
+          animation-delay: -0.7239s;
+}
+
+.confetti:nth-child(43) .askew {
+  -webkit-animation-duration: 1.69s;
+          animation-duration: 1.69s;
+  -webkit-animation-delay: -1.5379s;
+          animation-delay: -1.5379s;
+}
+
+.confetti:nth-child(43) .rotate {
+  -webkit-animation-duration: 1.08s;
+          animation-duration: 1.08s;
+  -webkit-animation-delay: -0.7128s;
+          animation-delay: -0.7128s;
+}
+
+.confetti:nth-child(44) .askew {
+  -webkit-animation-duration: 1.31s;
+          animation-duration: 1.31s;
+  -webkit-animation-delay: -0.2358s;
+          animation-delay: -0.2358s;
+}
+
+.confetti:nth-child(44) .rotate {
+  -webkit-animation-duration: 1.59s;
+          animation-duration: 1.59s;
+  -webkit-animation-delay: -0.2226s;
+          animation-delay: -0.2226s;
+}
+
+.confetti:nth-child(45) .askew {
+  -webkit-animation-duration: 1.81s;
+          animation-duration: 1.81s;
+  -webkit-animation-delay: -1.7738s;
+          animation-delay: -1.7738s;
+}
+
+.confetti:nth-child(45) .rotate {
+  -webkit-animation-duration: 1.01s;
+          animation-duration: 1.01s;
+  -webkit-animation-delay: -0.5151s;
+          animation-delay: -0.5151s;
+}
+
+.confetti:nth-child(46) .askew {
+  -webkit-animation-duration: 1.89s;
+          animation-duration: 1.89s;
+  -webkit-animation-delay: -0.3591s;
+          animation-delay: -0.3591s;
+}
+
+.confetti:nth-child(46) .rotate {
+  -webkit-animation-duration: 1.22s;
+          animation-duration: 1.22s;
+  -webkit-animation-delay: -0.5368s;
+          animation-delay: -0.5368s;
+}
+
+.confetti:nth-child(47) .askew {
+  -webkit-animation-duration: 1.89s;
+          animation-duration: 1.89s;
+  -webkit-animation-delay: -1.4364s;
+          animation-delay: -1.4364s;
+}
+
+.confetti:nth-child(47) .rotate {
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: -1.215s;
+          animation-delay: -1.215s;
+}
+
+.confetti:nth-child(48) .askew {
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: -0.39s;
+          animation-delay: -0.39s;
+}
+
+.confetti:nth-child(48) .rotate {
+  -webkit-animation-duration: 1.36s;
+          animation-duration: 1.36s;
+  -webkit-animation-delay: -1.1968s;
+          animation-delay: -1.1968s;
+}
+
+.confetti:nth-child(49) .askew {
+  -webkit-animation-duration: 1.18s;
+          animation-duration: 1.18s;
+  -webkit-animation-delay: -0.8968s;
+          animation-delay: -0.8968s;
+}
+
+.confetti:nth-child(49) .rotate {
+  -webkit-animation-duration: 1.35s;
+          animation-duration: 1.35s;
+  -webkit-animation-delay: -0.567s;
+          animation-delay: -0.567s;
+}
+
+.confetti:nth-child(50) .askew {
+  -webkit-animation-duration: 1.93s;
+          animation-duration: 1.93s;
+  -webkit-animation-delay: -0.965s;
+          animation-delay: -0.965s;
+}
+
+.confetti:nth-child(50) .rotate {
+  -webkit-animation-duration: 1.26s;
+          animation-duration: 1.26s;
+  -webkit-animation-delay: -0.6678s;
+          animation-delay: -0.6678s;
+}
+
+.confetti:nth-child(51) .askew {
+  -webkit-animation-duration: 1.87s;
+          animation-duration: 1.87s;
+  -webkit-animation-delay: -0.6919s;
+          animation-delay: -0.6919s;
+}
+
+.confetti:nth-child(51) .rotate {
+  -webkit-animation-duration: 1.17s;
+          animation-duration: 1.17s;
+  -webkit-animation-delay: -0.4212s;
+          animation-delay: -0.4212s;
+}
+
+.confetti:nth-child(52) .askew {
+  -webkit-animation-duration: 1.38s;
+          animation-duration: 1.38s;
+  -webkit-animation-delay: -0.9246s;
+          animation-delay: -0.9246s;
+}
+
+.confetti:nth-child(52) .rotate {
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
+  -webkit-animation-delay: -0.671s;
+          animation-delay: -0.671s;
+}
+
+.confetti:nth-child(53) .askew {
+  -webkit-animation-duration: 1.59s;
+          animation-duration: 1.59s;
+  -webkit-animation-delay: -0.3657s;
+          animation-delay: -0.3657s;
+}
+
+.confetti:nth-child(53) .rotate {
+  -webkit-animation-duration: 1.49s;
+          animation-duration: 1.49s;
+  -webkit-animation-delay: -0.8046s;
+          animation-delay: -0.8046s;
+}
+
+.confetti:nth-child(54) .askew {
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: -1.44s;
+          animation-delay: -1.44s;
+}
+
+.confetti:nth-child(54) .rotate {
+  -webkit-animation-duration: 1.15s;
+          animation-duration: 1.15s;
+  -webkit-animation-delay: -0.4255s;
+          animation-delay: -0.4255s;
+}
+
+.confetti:nth-child(55) .askew {
+  -webkit-animation-duration: 1.05s;
+          animation-duration: 1.05s;
+  -webkit-animation-delay: -0.3675s;
+          animation-delay: -0.3675s;
+}
+
+.confetti:nth-child(55) .rotate {
+  -webkit-animation-duration: 1.95s;
+          animation-duration: 1.95s;
+  -webkit-animation-delay: -0.6825s;
+          animation-delay: -0.6825s;
+}
+
+.confetti:nth-child(56) .askew {
+  -webkit-animation-duration: 1.01s;
+          animation-duration: 1.01s;
+  -webkit-animation-delay: -0.2828s;
+          animation-delay: -0.2828s;
+}
+
+.confetti:nth-child(56) .rotate {
+  -webkit-animation-duration: 1.02s;
+          animation-duration: 1.02s;
+  -webkit-animation-delay: -0.0306s;
+          animation-delay: -0.0306s;
+}
+
+.confetti:nth-child(57) .askew {
+  -webkit-animation-duration: 1.96s;
+          animation-duration: 1.96s;
+  -webkit-animation-delay: -0.7252s;
+          animation-delay: -0.7252s;
+}
+
+.confetti:nth-child(57) .rotate {
+  -webkit-animation-duration: 1.55s;
+          animation-duration: 1.55s;
+  -webkit-animation-delay: -0.124s;
+          animation-delay: -0.124s;
+}
+
+.confetti:nth-child(58) .askew {
+  -webkit-animation-duration: 1.98s;
+          animation-duration: 1.98s;
+  -webkit-animation-delay: -1.5246s;
+          animation-delay: -1.5246s;
+}
+
+.confetti:nth-child(58) .rotate {
+  -webkit-animation-duration: 1.19s;
+          animation-duration: 1.19s;
+  -webkit-animation-delay: -0.3689s;
+          animation-delay: -0.3689s;
+}
+
+.confetti:nth-child(59) .askew {
+  -webkit-animation-duration: 1.67s;
+          animation-duration: 1.67s;
+  -webkit-animation-delay: -1.1857s;
+          animation-delay: -1.1857s;
+}
+
+.confetti:nth-child(59) .rotate {
+  -webkit-animation-duration: 1.03s;
+          animation-duration: 1.03s;
+  -webkit-animation-delay: -0.2884s;
+          animation-delay: -0.2884s;
+}
+
+.confetti:nth-child(60) .askew {
+  -webkit-animation-duration: 1.54s;
+          animation-duration: 1.54s;
+  -webkit-animation-delay: -0.2002s;
+          animation-delay: -0.2002s;
+}
+
+.confetti:nth-child(60) .rotate {
+  -webkit-animation-duration: 1.64s;
+          animation-duration: 1.64s;
+  -webkit-animation-delay: -1.4104s;
+          animation-delay: -1.4104s;
+}
+
+.confetti:nth-child(61) .askew {
+  -webkit-animation-duration: 1.09s;
+          animation-duration: 1.09s;
+  -webkit-animation-delay: -1.0464s;
+          animation-delay: -1.0464s;
+}
+
+.confetti:nth-child(61) .rotate {
+  -webkit-animation-duration: 1.45s;
+          animation-duration: 1.45s;
+  -webkit-animation-delay: -0.464s;
+          animation-delay: -0.464s;
+}
+
+.confetti:nth-child(62) .askew {
+  -webkit-animation-duration: 1.57s;
+          animation-duration: 1.57s;
+  -webkit-animation-delay: -1.413s;
+          animation-delay: -1.413s;
+}
+
+.confetti:nth-child(62) .rotate {
+  -webkit-animation-duration: 1.05s;
+          animation-duration: 1.05s;
+  -webkit-animation-delay: -0.5985s;
+          animation-delay: -0.5985s;
+}
+
+.confetti:nth-child(63) .askew {
+  -webkit-animation-duration: 1.09s;
+          animation-duration: 1.09s;
+  -webkit-animation-delay: -0.981s;
+          animation-delay: -0.981s;
+}
+
+.confetti:nth-child(63) .rotate {
+  -webkit-animation-duration: 1.49s;
+          animation-duration: 1.49s;
+  -webkit-animation-delay: -0.7599s;
+          animation-delay: -0.7599s;
+}
+
+.confetti:nth-child(64) .askew {
+  -webkit-animation-duration: 1.57s;
+          animation-duration: 1.57s;
+  -webkit-animation-delay: -1.5543s;
+          animation-delay: -1.5543s;
+}
+
+.confetti:nth-child(64) .rotate {
+  -webkit-animation-duration: 1.81s;
+          animation-duration: 1.81s;
+  -webkit-animation-delay: -0.8145s;
+          animation-delay: -0.8145s;
+}
+
+.confetti:nth-child(65) .askew {
+  -webkit-animation-duration: 1.37s;
+          animation-duration: 1.37s;
+  -webkit-animation-delay: -0.4247s;
+          animation-delay: -0.4247s;
+}
+
+.confetti:nth-child(65) .rotate {
+  -webkit-animation-duration: 1.95s;
+          animation-duration: 1.95s;
+  -webkit-animation-delay: -1.6965s;
+          animation-delay: -1.6965s;
+}
+
+.confetti:nth-child(66) .askew {
+  -webkit-animation-duration: 1.13s;
+          animation-duration: 1.13s;
+  -webkit-animation-delay: -1.0622s;
+          animation-delay: -1.0622s;
+}
+
+.confetti:nth-child(66) .rotate {
+  -webkit-animation-duration: 1.79s;
+          animation-duration: 1.79s;
+  -webkit-animation-delay: -0.7876s;
+          animation-delay: -0.7876s;
+}
+
+.confetti:nth-child(67) .askew {
+  -webkit-animation-duration: 1.17s;
+          animation-duration: 1.17s;
+  -webkit-animation-delay: -1.1583s;
+          animation-delay: -1.1583s;
+}
+
+.confetti:nth-child(67) .rotate {
+  -webkit-animation-duration: 1.81s;
+          animation-duration: 1.81s;
+  -webkit-animation-delay: -0.5249s;
+          animation-delay: -0.5249s;
+}
+
+.confetti:nth-child(68) .askew {
+  -webkit-animation-duration: 1.58s;
+          animation-duration: 1.58s;
+  -webkit-animation-delay: -1.5484s;
+          animation-delay: -1.5484s;
+}
+
+.confetti:nth-child(68) .rotate {
+  -webkit-animation-duration: 1.52s;
+          animation-duration: 1.52s;
+  -webkit-animation-delay: -0.8208s;
+          animation-delay: -0.8208s;
+}
+
+.confetti:nth-child(69) .askew {
+  -webkit-animation-duration: 1.89s;
+          animation-duration: 1.89s;
+  -webkit-animation-delay: -0.3969s;
+          animation-delay: -0.3969s;
+}
+
+.confetti:nth-child(69) .rotate {
+  -webkit-animation-duration: 1.51s;
+          animation-duration: 1.51s;
+  -webkit-animation-delay: -0.4681s;
+          animation-delay: -0.4681s;
+}
+
+.confetti:nth-child(70) .askew {
+  -webkit-animation-duration: 1.54s;
+          animation-duration: 1.54s;
+  -webkit-animation-delay: -1.4168s;
+          animation-delay: -1.4168s;
+}
+
+.confetti:nth-child(70) .rotate {
+  -webkit-animation-duration: 1.63s;
+          animation-duration: 1.63s;
+  -webkit-animation-delay: -0.0163s;
+          animation-delay: -0.0163s;
+}
+
+.confetti:nth-child(71) .askew {
+  -webkit-animation-duration: 1.89s;
+          animation-duration: 1.89s;
+  -webkit-animation-delay: -1.2096s;
+          animation-delay: -1.2096s;
+}
+
+.confetti:nth-child(71) .rotate {
+  -webkit-animation-duration: 1.09s;
+          animation-duration: 1.09s;
+  -webkit-animation-delay: -0.2507s;
+          animation-delay: -0.2507s;
+}
+
+.confetti:nth-child(72) .askew {
+  -webkit-animation-duration: 1.23s;
+          animation-duration: 1.23s;
+  -webkit-animation-delay: -1.2054s;
+          animation-delay: -1.2054s;
+}
+
+.confetti:nth-child(72) .rotate {
+  -webkit-animation-duration: 1.25s;
+          animation-duration: 1.25s;
+  -webkit-animation-delay: -1.2375s;
+          animation-delay: -1.2375s;
+}
+
+.confetti:nth-child(73) .askew {
+  -webkit-animation-duration: 1.86s;
+          animation-duration: 1.86s;
+  -webkit-animation-delay: -0.3348s;
+          animation-delay: -0.3348s;
+}
+
+.confetti:nth-child(73) .rotate {
+  -webkit-animation-duration: 1.95s;
+          animation-duration: 1.95s;
+  -webkit-animation-delay: -0.5655s;
+          animation-delay: -0.5655s;
+}
+
+.confetti:nth-child(74) .askew {
+  -webkit-animation-duration: 1.06s;
+          animation-duration: 1.06s;
+  -webkit-animation-delay: -0.7844s;
+          animation-delay: -0.7844s;
+}
+
+.confetti:nth-child(74) .rotate {
+  -webkit-animation-duration: 1.48s;
+          animation-duration: 1.48s;
+  -webkit-animation-delay: -1.0064s;
+          animation-delay: -1.0064s;
+}
+
+.confetti:nth-child(75) .askew {
+  -webkit-animation-duration: 1.51s;
+          animation-duration: 1.51s;
+  -webkit-animation-delay: -0.4379s;
+          animation-delay: -0.4379s;
+}
+
+.confetti:nth-child(75) .rotate {
+  -webkit-animation-duration: 1.54s;
+          animation-duration: 1.54s;
+  -webkit-animation-delay: -1.2782s;
+          animation-delay: -1.2782s;
+}
+
+.confetti:nth-child(76) .askew {
+  -webkit-animation-duration: 1.83s;
+          animation-duration: 1.83s;
+  -webkit-animation-delay: -1.1895s;
+          animation-delay: -1.1895s;
+}
+
+.confetti:nth-child(76) .rotate {
+  -webkit-animation-duration: 1.88s;
+          animation-duration: 1.88s;
+  -webkit-animation-delay: -1.598s;
+          animation-delay: -1.598s;
+}
+
+.confetti:nth-child(77) .askew {
+  -webkit-animation-duration: 1.29s;
+          animation-duration: 1.29s;
+  -webkit-animation-delay: -1.0965s;
+          animation-delay: -1.0965s;
+}
+
+.confetti:nth-child(77) .rotate {
+  -webkit-animation-duration: 1.03s;
+          animation-duration: 1.03s;
+  -webkit-animation-delay: -0.927s;
+          animation-delay: -0.927s;
+}
+
+.confetti:nth-child(78) .askew {
+  -webkit-animation-duration: 1.54s;
+          animation-duration: 1.54s;
+  -webkit-animation-delay: -0.9856s;
+          animation-delay: -0.9856s;
+}
+
+.confetti:nth-child(78) .rotate {
+  -webkit-animation-duration: 1.38s;
+          animation-duration: 1.38s;
+  -webkit-animation-delay: -0.8004s;
+          animation-delay: -0.8004s;
+}
+
+.confetti:nth-child(79) .askew {
+  -webkit-animation-duration: 1.58s;
+          animation-duration: 1.58s;
+  -webkit-animation-delay: -0.3476s;
+          animation-delay: -0.3476s;
+}
+
+.confetti:nth-child(79) .rotate {
+  -webkit-animation-duration: 1.22s;
+          animation-duration: 1.22s;
+  -webkit-animation-delay: -0.5124s;
+          animation-delay: -0.5124s;
+}
+
+.confetti:nth-child(80) .askew {
+  -webkit-animation-duration: 1.88s;
+          animation-duration: 1.88s;
+  -webkit-animation-delay: -1.0904s;
+          animation-delay: -1.0904s;
+}
+
+.confetti:nth-child(80) .rotate {
+  -webkit-animation-duration: 1.04s;
+          animation-duration: 1.04s;
+  -webkit-animation-delay: -0.7904s;
+          animation-delay: -0.7904s;
+}
+
+.confetti:nth-child(81) .askew {
+  -webkit-animation-duration: 1.82s;
+          animation-duration: 1.82s;
+  -webkit-animation-delay: -0.8918s;
+          animation-delay: -0.8918s;
+}
+
+.confetti:nth-child(81) .rotate {
+  -webkit-animation-duration: 1.88s;
+          animation-duration: 1.88s;
+  -webkit-animation-delay: -1.2784s;
+          animation-delay: -1.2784s;
+}
+
+.confetti:nth-child(82) .askew {
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+  -webkit-animation-delay: -0.738s;
+          animation-delay: -0.738s;
+}
+
+.confetti:nth-child(82) .rotate {
+  -webkit-animation-duration: 1.37s;
+          animation-duration: 1.37s;
+  -webkit-animation-delay: -0.3973s;
+          animation-delay: -0.3973s;
+}
+
+.confetti:nth-child(83) .askew {
+  -webkit-animation-duration: 1.63s;
+          animation-duration: 1.63s;
+  -webkit-animation-delay: -0.6357s;
+          animation-delay: -0.6357s;
+}
+
+.confetti:nth-child(83) .rotate {
+  -webkit-animation-duration: 1.06s;
+          animation-duration: 1.06s;
+  -webkit-animation-delay: -0.4664s;
+          animation-delay: -0.4664s;
+}
+
+.confetti:nth-child(84) .askew {
+  -webkit-animation-duration: 1.37s;
+          animation-duration: 1.37s;
+  -webkit-animation-delay: -1.2604s;
+          animation-delay: -1.2604s;
+}
+
+.confetti:nth-child(84) .rotate {
+  -webkit-animation-duration: 1.68s;
+          animation-duration: 1.68s;
+  -webkit-animation-delay: -0.9744s;
+          animation-delay: -0.9744s;
+}
+
+.confetti:nth-child(85) .askew {
+  -webkit-animation-duration: 1.33s;
+          animation-duration: 1.33s;
+  -webkit-animation-delay: -0.0399s;
+          animation-delay: -0.0399s;
+}
+
+.confetti:nth-child(85) .rotate {
+  -webkit-animation-duration: 1.12s;
+          animation-duration: 1.12s;
+  -webkit-animation-delay: -0.4032s;
+          animation-delay: -0.4032s;
+}
+
+.confetti:nth-child(86) .askew {
+  -webkit-animation-duration: 1.38s;
+          animation-duration: 1.38s;
+  -webkit-animation-delay: -0.0414s;
+          animation-delay: -0.0414s;
+}
+
+.confetti:nth-child(86) .rotate {
+  -webkit-animation-duration: 1.84s;
+          animation-duration: 1.84s;
+  -webkit-animation-delay: -0.3864s;
+          animation-delay: -0.3864s;
+}
+
+.confetti:nth-child(87) .askew {
+  -webkit-animation-duration: 1.39s;
+          animation-duration: 1.39s;
+  -webkit-animation-delay: -1.0425s;
+          animation-delay: -1.0425s;
+}
+
+.confetti:nth-child(87) .rotate {
+  -webkit-animation-duration: 1.78s;
+          animation-duration: 1.78s;
+  -webkit-animation-delay: -0.0712s;
+          animation-delay: -0.0712s;
+}
+
+.confetti:nth-child(88) .askew {
+  -webkit-animation-duration: 1.41s;
+          animation-duration: 1.41s;
+  -webkit-animation-delay: -1.2972s;
+          animation-delay: -1.2972s;
+}
+
+.confetti:nth-child(88) .rotate {
+  -webkit-animation-duration: 1.25s;
+          animation-duration: 1.25s;
+  -webkit-animation-delay: -0.35s;
+          animation-delay: -0.35s;
+}
+
+.confetti:nth-child(89) .askew {
+  -webkit-animation-duration: 1.08s;
+          animation-duration: 1.08s;
+  -webkit-animation-delay: -0.0324s;
+          animation-delay: -0.0324s;
+}
+
+.confetti:nth-child(89) .rotate {
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: -0.765s;
+          animation-delay: -0.765s;
+}
+
+.confetti:nth-child(90) .askew {
+  -webkit-animation-duration: 1.46s;
+          animation-duration: 1.46s;
+  -webkit-animation-delay: -0.7154s;
+          animation-delay: -0.7154s;
+}
+
+.confetti:nth-child(90) .rotate {
+  -webkit-animation-duration: 1.37s;
+          animation-duration: 1.37s;
+  -webkit-animation-delay: -0.4795s;
+          animation-delay: -0.4795s;
+}
+
+.confetti:nth-child(91) .askew {
+  -webkit-animation-duration: 1.35s;
+          animation-duration: 1.35s;
+  -webkit-animation-delay: -0.4455s;
+          animation-delay: -0.4455s;
+}
+
+.confetti:nth-child(91) .rotate {
+  -webkit-animation-duration: 1.55s;
+          animation-duration: 1.55s;
+  -webkit-animation-delay: -0.1085s;
+          animation-delay: -0.1085s;
+}
+
+.confetti:nth-child(92) .askew {
+  -webkit-animation-duration: 1.41s;
+          animation-duration: 1.41s;
+  -webkit-animation-delay: -0.0564s;
+          animation-delay: -0.0564s;
+}
+
+.confetti:nth-child(92) .rotate {
+  -webkit-animation-duration: 1.35s;
+          animation-duration: 1.35s;
+  -webkit-animation-delay: -0.0405s;
+          animation-delay: -0.0405s;
+}
+
+.confetti:nth-child(93) .askew {
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-delay: -1.12s;
+          animation-delay: -1.12s;
+}
+
+.confetti:nth-child(93) .rotate {
+  -webkit-animation-duration: 1.64s;
+          animation-duration: 1.64s;
+  -webkit-animation-delay: -1.1316s;
+          animation-delay: -1.1316s;
+}
+
+.confetti:nth-child(94) .askew {
+  -webkit-animation-duration: 1.12s;
+          animation-duration: 1.12s;
+  -webkit-animation-delay: -0.0336s;
+          animation-delay: -0.0336s;
+}
+
+.confetti:nth-child(94) .rotate {
+  -webkit-animation-duration: 1.04s;
+          animation-duration: 1.04s;
+  -webkit-animation-delay: -0.4368s;
+          animation-delay: -0.4368s;
+}
+
+.confetti:nth-child(95) .askew {
+  -webkit-animation-duration: 1.74s;
+          animation-duration: 1.74s;
+  -webkit-animation-delay: -0.0522s;
+          animation-delay: -0.0522s;
+}
+
+.confetti:nth-child(95) .rotate {
+  -webkit-animation-duration: 1.24s;
+          animation-duration: 1.24s;
+  -webkit-animation-delay: -0.992s;
+          animation-delay: -0.992s;
+}
+
+.confetti:nth-child(96) .askew {
+  -webkit-animation-duration: 1.36s;
+          animation-duration: 1.36s;
+  -webkit-animation-delay: -0.1904s;
+          animation-delay: -0.1904s;
+}
+
+.confetti:nth-child(96) .rotate {
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
+  -webkit-animation-delay: -0.726s;
+          animation-delay: -0.726s;
+}
+
+.confetti:nth-child(97) .askew {
+  -webkit-animation-duration: 1.37s;
+          animation-duration: 1.37s;
+  -webkit-animation-delay: -1.0412s;
+          animation-delay: -1.0412s;
+}
+
+.confetti:nth-child(97) .rotate {
+  -webkit-animation-duration: 1.44s;
+          animation-duration: 1.44s;
+  -webkit-animation-delay: -1.1088s;
+          animation-delay: -1.1088s;
+}
+
+.confetti:nth-child(98) .askew {
+  -webkit-animation-duration: 1.78s;
+          animation-duration: 1.78s;
+  -webkit-animation-delay: -0.7654s;
+          animation-delay: -0.7654s;
+}
+
+.confetti:nth-child(98) .rotate {
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-delay: -0.168s;
+          animation-delay: -0.168s;
+}
+
+.confetti:nth-child(99) .askew {
+  -webkit-animation-duration: 1.39s;
+          animation-duration: 1.39s;
+  -webkit-animation-delay: -0.0278s;
+          animation-delay: -0.0278s;
+}
+
+.confetti:nth-child(99) .rotate {
+  -webkit-animation-duration: 1.44s;
+          animation-duration: 1.44s;
+  -webkit-animation-delay: -1.3248s;
+          animation-delay: -1.3248s;
+}
+
+.confetti:nth-child(100) .askew {
+  -webkit-animation-duration: 1.58s;
+          animation-duration: 1.58s;
+  -webkit-animation-delay: -0.0948s;
+          animation-delay: -0.0948s;
+}
+
+.confetti:nth-child(100) .rotate {
+  -webkit-animation-duration: 1.65s;
+          animation-duration: 1.65s;
+  -webkit-animation-delay: -1.1385s;
+          animation-delay: -1.1385s;
+}
+
+.confetti:nth-child(101) .askew {
+  -webkit-animation-duration: 1.72s;
+          animation-duration: 1.72s;
+  -webkit-animation-delay: -1.0492s;
+          animation-delay: -1.0492s;
+}
+
+.confetti:nth-child(101) .rotate {
+  -webkit-animation-duration: 1.31s;
+          animation-duration: 1.31s;
+  -webkit-animation-delay: -0.1965s;
+          animation-delay: -0.1965s;
+}
+
+.confetti:nth-child(102) .askew {
+  -webkit-animation-duration: 1.79s;
+          animation-duration: 1.79s;
+  -webkit-animation-delay: -1.0203s;
+          animation-delay: -1.0203s;
+}
+
+.confetti:nth-child(102) .rotate {
+  -webkit-animation-duration: 1.61s;
+          animation-duration: 1.61s;
+  -webkit-animation-delay: -0.483s;
+          animation-delay: -0.483s;
+}
+
+.confetti:nth-child(103) .askew {
+  -webkit-animation-duration: 1.63s;
+          animation-duration: 1.63s;
+  -webkit-animation-delay: -1.5159s;
+          animation-delay: -1.5159s;
+}
+
+.confetti:nth-child(103) .rotate {
+  -webkit-animation-duration: 1.47s;
+          animation-duration: 1.47s;
+  -webkit-animation-delay: -0.1617s;
+          animation-delay: -0.1617s;
+}
+
+.confetti:nth-child(104) .askew {
+  -webkit-animation-duration: 1.76s;
+          animation-duration: 1.76s;
+  -webkit-animation-delay: -0.528s;
+          animation-delay: -0.528s;
+}
+
+.confetti:nth-child(104) .rotate {
+  -webkit-animation-duration: 1.68s;
+          animation-duration: 1.68s;
+  -webkit-animation-delay: -0.504s;
+          animation-delay: -0.504s;
+}
+
+.confetti:nth-child(105) .askew {
+  -webkit-animation-duration: 1.95s;
+          animation-duration: 1.95s;
+  -webkit-animation-delay: -1.209s;
+          animation-delay: -1.209s;
+}
+
+.confetti:nth-child(105) .rotate {
+  -webkit-animation-duration: 1.02s;
+          animation-duration: 1.02s;
+  -webkit-animation-delay: -0.3162s;
+          animation-delay: -0.3162s;
+}
+
+.confetti:nth-child(106) .askew {
+  -webkit-animation-duration: 1.07s;
+          animation-duration: 1.07s;
+  -webkit-animation-delay: -0.0321s;
+          animation-delay: -0.0321s;
+}
+
+.confetti:nth-child(106) .rotate {
+  -webkit-animation-duration: 1.97s;
+          animation-duration: 1.97s;
+  -webkit-animation-delay: -1.379s;
+          animation-delay: -1.379s;
+}
+
+.confetti:nth-child(107) .askew {
+  -webkit-animation-duration: 1.22s;
+          animation-duration: 1.22s;
+  -webkit-animation-delay: -0.8906s;
+          animation-delay: -0.8906s;
+}
+
+.confetti:nth-child(107) .rotate {
+  -webkit-animation-duration: 1.79s;
+          animation-duration: 1.79s;
+  -webkit-animation-delay: -1.6826s;
+          animation-delay: -1.6826s;
+}
+
+.confetti:nth-child(108) .askew {
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-delay: -0.54s;
+          animation-delay: -0.54s;
+}
+
+.confetti:nth-child(108) .rotate {
+  -webkit-animation-duration: 1.17s;
+          animation-duration: 1.17s;
+  -webkit-animation-delay: -1.17s;
+          animation-delay: -1.17s;
+}
+
+.confetti:nth-child(109) .askew {
+  -webkit-animation-duration: 1.32s;
+          animation-duration: 1.32s;
+  -webkit-animation-delay: -0.8316s;
+          animation-delay: -0.8316s;
+}
+
+.confetti:nth-child(109) .rotate {
+  -webkit-animation-duration: 1.21s;
+          animation-duration: 1.21s;
+  -webkit-animation-delay: -1.0285s;
+          animation-delay: -1.0285s;
+}
+
+.confetti:nth-child(110) .askew {
+  -webkit-animation-duration: 1.42s;
+          animation-duration: 1.42s;
+  -webkit-animation-delay: -0.1278s;
+          animation-delay: -0.1278s;
+}
+
+.confetti:nth-child(110) .rotate {
+  -webkit-animation-duration: 1.39s;
+          animation-duration: 1.39s;
+  -webkit-animation-delay: -0.4448s;
+          animation-delay: -0.4448s;
+}
+
+.confetti:nth-child(111) .askew {
+  -webkit-animation-duration: 1.77s;
+          animation-duration: 1.77s;
+  -webkit-animation-delay: -0.9912s;
+          animation-delay: -0.9912s;
+}
+
+.confetti:nth-child(111) .rotate {
+  -webkit-animation-duration: 1.64s;
+          animation-duration: 1.64s;
+  -webkit-animation-delay: -1.5252s;
+          animation-delay: -1.5252s;
+}
+
+.confetti:nth-child(112) .askew {
+  -webkit-animation-duration: 1.21s;
+          animation-duration: 1.21s;
+  -webkit-animation-delay: -0.6171s;
+          animation-delay: -0.6171s;
+}
+
+.confetti:nth-child(112) .rotate {
+  -webkit-animation-duration: 1.07s;
+          animation-duration: 1.07s;
+  -webkit-animation-delay: -0.5457s;
+          animation-delay: -0.5457s;
+}
+
+.confetti:nth-child(113) .askew {
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
+  -webkit-animation-delay: -0.858s;
+          animation-delay: -0.858s;
+}
+
+.confetti:nth-child(113) .rotate {
+  -webkit-animation-duration: 1.83s;
+          animation-duration: 1.83s;
+  -webkit-animation-delay: -1.7019s;
+          animation-delay: -1.7019s;
+}
+
+.confetti:nth-child(114) .askew {
+  -webkit-animation-duration: 1.25s;
+          animation-duration: 1.25s;
+  -webkit-animation-delay: -0.75s;
+          animation-delay: -0.75s;
+}
+
+.confetti:nth-child(114) .rotate {
+  -webkit-animation-duration: 1.95s;
+          animation-duration: 1.95s;
+  -webkit-animation-delay: -0.234s;
+          animation-delay: -0.234s;
+}
+
+.confetti:nth-child(115) .askew {
+  -webkit-animation-duration: 1.72s;
+          animation-duration: 1.72s;
+  -webkit-animation-delay: -0.344s;
+          animation-delay: -0.344s;
+}
+
+.confetti:nth-child(115) .rotate {
+  -webkit-animation-duration: 1.15s;
+          animation-duration: 1.15s;
+  -webkit-animation-delay: -0.253s;
+          animation-delay: -0.253s;
+}
+
+.confetti:nth-child(116) .askew {
+  -webkit-animation-duration: 1.99s;
+          animation-duration: 1.99s;
+  -webkit-animation-delay: -0.7761s;
+          animation-delay: -0.7761s;
+}
+
+.confetti:nth-child(116) .rotate {
+  -webkit-animation-duration: 1.24s;
+          animation-duration: 1.24s;
+  -webkit-animation-delay: -0.6572s;
+          animation-delay: -0.6572s;
+}
+
+.confetti:nth-child(117) .askew {
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+  -webkit-animation-delay: -0.026s;
+          animation-delay: -0.026s;
+}
+
+.confetti:nth-child(117) .rotate {
+  -webkit-animation-duration: 1.68s;
+          animation-duration: 1.68s;
+  -webkit-animation-delay: -1.5624s;
+          animation-delay: -1.5624s;
+}
+
+.confetti:nth-child(118) .askew {
+  -webkit-animation-duration: 1.43s;
+          animation-duration: 1.43s;
+  -webkit-animation-delay: -1.0296s;
+          animation-delay: -1.0296s;
+}
+
+.confetti:nth-child(118) .rotate {
+  -webkit-animation-duration: 1.79s;
+          animation-duration: 1.79s;
+  -webkit-animation-delay: -0.8771s;
+          animation-delay: -0.8771s;
+}
+
+.confetti:nth-child(119) .askew {
+  -webkit-animation-duration: 1.86s;
+          animation-duration: 1.86s;
+  -webkit-animation-delay: -0.3162s;
+          animation-delay: -0.3162s;
+}
+
+.confetti:nth-child(119) .rotate {
+  -webkit-animation-duration: 1.7s;
+          animation-duration: 1.7s;
+  -webkit-animation-delay: -0.578s;
+          animation-delay: -0.578s;
+}
+
+.confetti:nth-child(120) .askew {
+  -webkit-animation-duration: 1.46s;
+          animation-duration: 1.46s;
+  -webkit-animation-delay: -0.1898s;
+          animation-delay: -0.1898s;
+}
+
+.confetti:nth-child(120) .rotate {
+  -webkit-animation-duration: 1.04s;
+          animation-duration: 1.04s;
+  -webkit-animation-delay: -0.156s;
+          animation-delay: -0.156s;
+}
+
+.confetti:nth-child(121) .askew {
+  -webkit-animation-duration: 1.33s;
+          animation-duration: 1.33s;
+  -webkit-animation-delay: -1.197s;
+          animation-delay: -1.197s;
+}
+
+.confetti:nth-child(121) .rotate {
+  -webkit-animation-duration: 1.18s;
+          animation-duration: 1.18s;
+  -webkit-animation-delay: -0.6018s;
+          animation-delay: -0.6018s;
+}
+
+.confetti:nth-child(122) .askew {
+  -webkit-animation-duration: 1.89s;
+          animation-duration: 1.89s;
+  -webkit-animation-delay: -0.378s;
+          animation-delay: -0.378s;
+}
+
+.confetti:nth-child(122) .rotate {
+  -webkit-animation-duration: 1.62s;
+          animation-duration: 1.62s;
+  -webkit-animation-delay: -0.6804s;
+          animation-delay: -0.6804s;
+}
+
+.confetti:nth-child(123) .askew {
+  -webkit-animation-duration: 1.99s;
+          animation-duration: 1.99s;
+  -webkit-animation-delay: -0.5174s;
+          animation-delay: -0.5174s;
+}
+
+.confetti:nth-child(123) .rotate {
+  -webkit-animation-duration: 1.24s;
+          animation-duration: 1.24s;
+  -webkit-animation-delay: -1.1408s;
+          animation-delay: -1.1408s;
+}
+
+.confetti:nth-child(124) .askew {
+  -webkit-animation-duration: 1.83s;
+          animation-duration: 1.83s;
+  -webkit-animation-delay: -0.6771s;
+          animation-delay: -0.6771s;
+}
+
+.confetti:nth-child(124) .rotate {
+  -webkit-animation-duration: 1.56s;
+          animation-duration: 1.56s;
+  -webkit-animation-delay: -0.4836s;
+          animation-delay: -0.4836s;
+}
+
+.confetti:nth-child(125) .askew {
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+  -webkit-animation-delay: -1.056s;
+          animation-delay: -1.056s;
+}
+
+.confetti:nth-child(125) .rotate {
+  -webkit-animation-duration: 1.36s;
+          animation-duration: 1.36s;
+  -webkit-animation-delay: -0.1496s;
+          animation-delay: -0.1496s;
+}
+
+.confetti:nth-child(126) .askew {
+  -webkit-animation-duration: 1.49s;
+          animation-duration: 1.49s;
+  -webkit-animation-delay: -0.5513s;
+          animation-delay: -0.5513s;
+}
+
+.confetti:nth-child(126) .rotate {
+  -webkit-animation-duration: 1.67s;
+          animation-duration: 1.67s;
+  -webkit-animation-delay: -0.5678s;
+          animation-delay: -0.5678s;
+}
+
+.confetti:nth-child(127) .askew {
+  -webkit-animation-duration: 1.36s;
+          animation-duration: 1.36s;
+  -webkit-animation-delay: -1.2376s;
+          animation-delay: -1.2376s;
+}
+
+.confetti:nth-child(127) .rotate {
+  -webkit-animation-duration: 1.89s;
+          animation-duration: 1.89s;
+  -webkit-animation-delay: -1.7577s;
+          animation-delay: -1.7577s;
+}
+
+.confetti:nth-child(128) .askew {
+  -webkit-animation-duration: 1.12s;
+          animation-duration: 1.12s;
+  -webkit-animation-delay: -0.1904s;
+          animation-delay: -0.1904s;
+}
+
+.confetti:nth-child(128) .rotate {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: -1.96s;
+          animation-delay: -1.96s;
+}
+
+.confetti:nth-child(129) .askew {
+  -webkit-animation-duration: 1.55s;
+          animation-duration: 1.55s;
+  -webkit-animation-delay: -0.7285s;
+          animation-delay: -0.7285s;
+}
+
+.confetti:nth-child(129) .rotate {
+  -webkit-animation-duration: 1.32s;
+          animation-duration: 1.32s;
+  -webkit-animation-delay: -0.924s;
+          animation-delay: -0.924s;
+}
+
+.confetti:nth-child(130) .askew {
+  -webkit-animation-duration: 1.01s;
+          animation-duration: 1.01s;
+  -webkit-animation-delay: -0.909s;
+          animation-delay: -0.909s;
+}
+
+.confetti:nth-child(130) .rotate {
+  -webkit-animation-duration: 1.41s;
+          animation-duration: 1.41s;
+  -webkit-animation-delay: -0.6627s;
+          animation-delay: -0.6627s;
+}
+
+.confetti:nth-child(131) .askew {
+  -webkit-animation-duration: 1.37s;
+          animation-duration: 1.37s;
+  -webkit-animation-delay: -0.1096s;
+          animation-delay: -0.1096s;
+}
+
+.confetti:nth-child(131) .rotate {
+  -webkit-animation-duration: 1.63s;
+          animation-duration: 1.63s;
+  -webkit-animation-delay: -0.2771s;
+          animation-delay: -0.2771s;
+}
+
+.confetti:nth-child(132) .askew {
+  -webkit-animation-duration: 1.02s;
+          animation-duration: 1.02s;
+  -webkit-animation-delay: -0.306s;
+          animation-delay: -0.306s;
+}
+
+.confetti:nth-child(132) .rotate {
+  -webkit-animation-duration: 1.64s;
+          animation-duration: 1.64s;
+  -webkit-animation-delay: -0.4264s;
+          animation-delay: -0.4264s;
+}
+
+.confetti:nth-child(133) .askew {
+  -webkit-animation-duration: 1.51s;
+          animation-duration: 1.51s;
+  -webkit-animation-delay: -0.906s;
+          animation-delay: -0.906s;
+}
+
+.confetti:nth-child(133) .rotate {
+  -webkit-animation-duration: 1.06s;
+          animation-duration: 1.06s;
+  -webkit-animation-delay: -0.053s;
+          animation-delay: -0.053s;
+}
+
+.confetti:nth-child(134) .askew {
+  -webkit-animation-duration: 1.28s;
+          animation-duration: 1.28s;
+  -webkit-animation-delay: -0.6912s;
+          animation-delay: -0.6912s;
+}
+
+.confetti:nth-child(134) .rotate {
+  -webkit-animation-duration: 1.64s;
+          animation-duration: 1.64s;
+  -webkit-animation-delay: -0.5412s;
+          animation-delay: -0.5412s;
+}
+
+.confetti:nth-child(135) .askew {
+  -webkit-animation-duration: 1.9s;
+          animation-duration: 1.9s;
+  -webkit-animation-delay: -1.178s;
+          animation-delay: -1.178s;
+}
+
+.confetti:nth-child(135) .rotate {
+  -webkit-animation-duration: 1.51s;
+          animation-duration: 1.51s;
+  -webkit-animation-delay: -1.2684s;
+          animation-delay: -1.2684s;
+}
+
+.confetti:nth-child(136) .askew {
+  -webkit-animation-duration: 1.73s;
+          animation-duration: 1.73s;
+  -webkit-animation-delay: -1.2456s;
+          animation-delay: -1.2456s;
+}
+
+.confetti:nth-child(136) .rotate {
+  -webkit-animation-duration: 1.57s;
+          animation-duration: 1.57s;
+  -webkit-animation-delay: -0.9891s;
+          animation-delay: -0.9891s;
+}
+
+.confetti:nth-child(137) .askew {
+  -webkit-animation-duration: 1.91s;
+          animation-duration: 1.91s;
+  -webkit-animation-delay: -0.3247s;
+          animation-delay: -0.3247s;
+}
+
+.confetti:nth-child(137) .rotate {
+  -webkit-animation-duration: 1.67s;
+          animation-duration: 1.67s;
+  -webkit-animation-delay: -1.6032s;
+          animation-delay: -1.6032s;
+}
+
+.confetti:nth-child(138) .askew {
+  -webkit-animation-duration: 1.71s;
+          animation-duration: 1.71s;
+  -webkit-animation-delay: -0.8208s;
+          animation-delay: -0.8208s;
+}
+
+.confetti:nth-child(138) .rotate {
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: -1.26s;
+          animation-delay: -1.26s;
+}
+
+.confetti:nth-child(139) .askew {
+  -webkit-animation-duration: 1.88s;
+          animation-duration: 1.88s;
+  -webkit-animation-delay: -0.8836s;
+          animation-delay: -0.8836s;
+}
+
+.confetti:nth-child(139) .rotate {
+  -webkit-animation-duration: 1.29s;
+          animation-duration: 1.29s;
+  -webkit-animation-delay: -1.2255s;
+          animation-delay: -1.2255s;
+}
+
+.confetti:nth-child(140) .askew {
+  -webkit-animation-duration: 1.39s;
+          animation-duration: 1.39s;
+  -webkit-animation-delay: -1.0842s;
+          animation-delay: -1.0842s;
+}
+
+.confetti:nth-child(140) .rotate {
+  -webkit-animation-duration: 1.61s;
+          animation-duration: 1.61s;
+  -webkit-animation-delay: -0.8855s;
+          animation-delay: -0.8855s;
+}
+
+.confetti:nth-child(141) .askew {
+  -webkit-animation-duration: 1.61s;
+          animation-duration: 1.61s;
+  -webkit-animation-delay: -0.1288s;
+          animation-delay: -0.1288s;
+}
+
+.confetti:nth-child(141) .rotate {
+  -webkit-animation-duration: 1.88s;
+          animation-duration: 1.88s;
+  -webkit-animation-delay: -0.8272s;
+          animation-delay: -0.8272s;
+}
+
+.confetti:nth-child(142) .askew {
+  -webkit-animation-duration: 1.75s;
+          animation-duration: 1.75s;
+  -webkit-animation-delay: -1.0325s;
+          animation-delay: -1.0325s;
+}
+
+.confetti:nth-child(142) .rotate {
+  -webkit-animation-duration: 1.57s;
+          animation-duration: 1.57s;
+  -webkit-animation-delay: -0.1256s;
+          animation-delay: -0.1256s;
+}
+
+.confetti:nth-child(143) .askew {
+  -webkit-animation-duration: 1.54s;
+          animation-duration: 1.54s;
+  -webkit-animation-delay: -0.8008s;
+          animation-delay: -0.8008s;
+}
+
+.confetti:nth-child(143) .rotate {
+  -webkit-animation-duration: 1.33s;
+          animation-duration: 1.33s;
+  -webkit-animation-delay: -0.4655s;
+          animation-delay: -0.4655s;
+}
+
+.confetti:nth-child(144) .askew {
+  -webkit-animation-duration: 1.71s;
+          animation-duration: 1.71s;
+  -webkit-animation-delay: -0.5985s;
+          animation-delay: -0.5985s;
+}
+
+.confetti:nth-child(144) .rotate {
+  -webkit-animation-duration: 1.41s;
+          animation-duration: 1.41s;
+  -webkit-animation-delay: -0.0282s;
+          animation-delay: -0.0282s;
+}
+
+.confetti:nth-child(145) .askew {
+  -webkit-animation-duration: 1.04s;
+          animation-duration: 1.04s;
+  -webkit-animation-delay: -0.7176s;
+          animation-delay: -0.7176s;
+}
+
+.confetti:nth-child(145) .rotate {
+  -webkit-animation-duration: 1.81s;
+          animation-duration: 1.81s;
+  -webkit-animation-delay: -0.7059s;
+          animation-delay: -0.7059s;
+}
+
+.confetti:nth-child(146) .askew {
+  -webkit-animation-duration: 1.12s;
+          animation-duration: 1.12s;
+  -webkit-animation-delay: -0.1008s;
+          animation-delay: -0.1008s;
+}
+
+.confetti:nth-child(146) .rotate {
+  -webkit-animation-duration: 1.99s;
+          animation-duration: 1.99s;
+  -webkit-animation-delay: -1.8308s;
+          animation-delay: -1.8308s;
+}
+
+.confetti:nth-child(147) .askew {
+  -webkit-animation-duration: 1.36s;
+          animation-duration: 1.36s;
+  -webkit-animation-delay: -0.3128s;
+          animation-delay: -0.3128s;
+}
+
+.confetti:nth-child(147) .rotate {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: -0.26s;
+          animation-delay: -0.26s;
+}
+
+.confetti:nth-child(148) .askew {
+  -webkit-animation-duration: 1.97s;
+          animation-duration: 1.97s;
+  -webkit-animation-delay: -1.2214s;
+          animation-delay: -1.2214s;
+}
+
+.confetti:nth-child(148) .rotate {
+  -webkit-animation-duration: 1.89s;
+          animation-duration: 1.89s;
+  -webkit-animation-delay: -1.7388s;
+          animation-delay: -1.7388s;
+}
+
+.confetti:nth-child(149) .askew {
+  -webkit-animation-duration: 1.45s;
+          animation-duration: 1.45s;
+  -webkit-animation-delay: -0.3625s;
+          animation-delay: -0.3625s;
+}
+
+.confetti:nth-child(149) .rotate {
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
+  -webkit-animation-delay: -0.693s;
+          animation-delay: -0.693s;
+}
+
+.confetti:nth-child(150) .askew {
+  -webkit-animation-duration: 1.69s;
+          animation-duration: 1.69s;
+  -webkit-animation-delay: -0.0845s;
+          animation-delay: -0.0845s;
+}
+
+.confetti:nth-child(150) .rotate {
+  -webkit-animation-duration: 1.24s;
+          animation-duration: 1.24s;
+  -webkit-animation-delay: -1.1284s;
+          animation-delay: -1.1284s;
+}
+
+.confetti:nth-child(151) .askew {
+  -webkit-animation-duration: 1.86s;
+          animation-duration: 1.86s;
+  -webkit-animation-delay: -0.3348s;
+          animation-delay: -0.3348s;
+}
+
+.confetti:nth-child(151) .rotate {
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-delay: -0.948s;
+          animation-delay: -0.948s;
+}
+
+.confetti:nth-child(152) .askew {
+  -webkit-animation-duration: 1.66s;
+          animation-duration: 1.66s;
+  -webkit-animation-delay: -0.332s;
+          animation-delay: -0.332s;
+}
+
+.confetti:nth-child(152) .rotate {
+  -webkit-animation-duration: 1.28s;
+          animation-duration: 1.28s;
+  -webkit-animation-delay: -0.0768s;
+          animation-delay: -0.0768s;
+}
+
+.confetti:nth-child(153) .askew {
+  -webkit-animation-duration: 1.06s;
+          animation-duration: 1.06s;
+  -webkit-animation-delay: -0.1484s;
+          animation-delay: -0.1484s;
+}
+
+.confetti:nth-child(153) .rotate {
+  -webkit-animation-duration: 1.91s;
+          animation-duration: 1.91s;
+  -webkit-animation-delay: -1.6808s;
+          animation-delay: -1.6808s;
+}
+
+.confetti:nth-child(154) .askew {
+  -webkit-animation-duration: 1.35s;
+          animation-duration: 1.35s;
+  -webkit-animation-delay: -0.135s;
+          animation-delay: -0.135s;
+}
+
+.confetti:nth-child(154) .rotate {
+  -webkit-animation-duration: 1.82s;
+          animation-duration: 1.82s;
+  -webkit-animation-delay: -0.7462s;
+          animation-delay: -0.7462s;
+}
+
+.confetti:nth-child(155) .askew {
+  -webkit-animation-duration: 1.32s;
+          animation-duration: 1.32s;
+  -webkit-animation-delay: -0.264s;
+          animation-delay: -0.264s;
+}
+
+.confetti:nth-child(155) .rotate {
+  -webkit-animation-duration: 1.17s;
+          animation-duration: 1.17s;
+  -webkit-animation-delay: -0.702s;
+          animation-delay: -0.702s;
+}
+
+.confetti:nth-child(156) .askew {
+  -webkit-animation-duration: 1.71s;
+          animation-duration: 1.71s;
+  -webkit-animation-delay: -0.6669s;
+          animation-delay: -0.6669s;
+}
+
+.confetti:nth-child(156) .rotate {
+  -webkit-animation-duration: 1.58s;
+          animation-duration: 1.58s;
+  -webkit-animation-delay: -1.2956s;
+          animation-delay: -1.2956s;
+}
+
+.confetti:nth-child(157) .askew {
+  -webkit-animation-duration: 1.12s;
+          animation-duration: 1.12s;
+  -webkit-animation-delay: -0.952s;
+          animation-delay: -0.952s;
+}
+
+.confetti:nth-child(157) .rotate {
+  -webkit-animation-duration: 1.98s;
+          animation-duration: 1.98s;
+  -webkit-animation-delay: -1.9206s;
+          animation-delay: -1.9206s;
+}
+
+.confetti:nth-child(158) .askew {
+  -webkit-animation-duration: 1.83s;
+          animation-duration: 1.83s;
+  -webkit-animation-delay: -1.8117s;
+          animation-delay: -1.8117s;
+}
+
+.confetti:nth-child(158) .rotate {
+  -webkit-animation-duration: 1.62s;
+          animation-duration: 1.62s;
+  -webkit-animation-delay: -0.0162s;
+          animation-delay: -0.0162s;
+}
+
+.confetti:nth-child(159) .askew {
+  -webkit-animation-duration: 1.04s;
+          animation-duration: 1.04s;
+  -webkit-animation-delay: -0.1664s;
+          animation-delay: -0.1664s;
+}
+
+.confetti:nth-child(159) .rotate {
+  -webkit-animation-duration: 1.69s;
+          animation-duration: 1.69s;
+  -webkit-animation-delay: -0.3718s;
+          animation-delay: -0.3718s;
+}
+
+.confetti:nth-child(160) .askew {
+  -webkit-animation-duration: 1.76s;
+          animation-duration: 1.76s;
+  -webkit-animation-delay: -0.1584s;
+          animation-delay: -0.1584s;
+}
+
+.confetti:nth-child(160) .rotate {
+  -webkit-animation-duration: 1.51s;
+          animation-duration: 1.51s;
+  -webkit-animation-delay: -0.5134s;
+          animation-delay: -0.5134s;
+}
+
+.confetti:nth-child(161) .askew {
+  -webkit-animation-duration: 1.52s;
+          animation-duration: 1.52s;
+  -webkit-animation-delay: -1.4592s;
+          animation-delay: -1.4592s;
+}
+
+.confetti:nth-child(161) .rotate {
+  -webkit-animation-duration: 1.47s;
+          animation-duration: 1.47s;
+  -webkit-animation-delay: -1.1466s;
+          animation-delay: -1.1466s;
+}
+
+.confetti:nth-child(162) .askew {
+  -webkit-animation-duration: 1.48s;
+          animation-duration: 1.48s;
+  -webkit-animation-delay: -1.1988s;
+          animation-delay: -1.1988s;
+}
+
+.confetti:nth-child(162) .rotate {
+  -webkit-animation-duration: 1.19s;
+          animation-duration: 1.19s;
+  -webkit-animation-delay: -0.3927s;
+          animation-delay: -0.3927s;
+}
+
+.confetti:nth-child(163) .askew {
+  -webkit-animation-duration: 1.9s;
+          animation-duration: 1.9s;
+  -webkit-animation-delay: -1.881s;
+          animation-delay: -1.881s;
+}
+
+.confetti:nth-child(163) .rotate {
+  -webkit-animation-duration: 1.71s;
+          animation-duration: 1.71s;
+  -webkit-animation-delay: -0.9405s;
+          animation-delay: -0.9405s;
+}
+
+.confetti:nth-child(164) .askew {
+  -webkit-animation-duration: 1.74s;
+          animation-duration: 1.74s;
+  -webkit-animation-delay: -0.9744s;
+          animation-delay: -0.9744s;
+}
+
+.confetti:nth-child(164) .rotate {
+  -webkit-animation-duration: 1.49s;
+          animation-duration: 1.49s;
+  -webkit-animation-delay: -1.3559s;
+          animation-delay: -1.3559s;
+}
+
+.confetti:nth-child(165) .askew {
+  -webkit-animation-duration: 1.15s;
+          animation-duration: 1.15s;
+  -webkit-animation-delay: -0.161s;
+          animation-delay: -0.161s;
+}
+
+.confetti:nth-child(165) .rotate {
+  -webkit-animation-duration: 1.93s;
+          animation-duration: 1.93s;
+  -webkit-animation-delay: -1.6405s;
+          animation-delay: -1.6405s;
+}
+
+.confetti:nth-child(166) .askew {
+  -webkit-animation-duration: 1.9s;
+          animation-duration: 1.9s;
+  -webkit-animation-delay: -1.064s;
+          animation-delay: -1.064s;
+}
+
+.confetti:nth-child(166) .rotate {
+  -webkit-animation-duration: 1.86s;
+          animation-duration: 1.86s;
+  -webkit-animation-delay: -0.6324s;
+          animation-delay: -0.6324s;
+}
+
+.confetti:nth-child(167) .askew {
+  -webkit-animation-duration: 1.83s;
+          animation-duration: 1.83s;
+  -webkit-animation-delay: -1.6836s;
+          animation-delay: -1.6836s;
+}
+
+.confetti:nth-child(167) .rotate {
+  -webkit-animation-duration: 1.08s;
+          animation-duration: 1.08s;
+  -webkit-animation-delay: -0.702s;
+          animation-delay: -0.702s;
+}
+
+.confetti:nth-child(168) .askew {
+  -webkit-animation-duration: 1.68s;
+          animation-duration: 1.68s;
+  -webkit-animation-delay: -1.4952s;
+          animation-delay: -1.4952s;
+}
+
+.confetti:nth-child(168) .rotate {
+  -webkit-animation-duration: 1.36s;
+          animation-duration: 1.36s;
+  -webkit-animation-delay: -0.8296s;
+          animation-delay: -0.8296s;
+}
+
+.confetti:nth-child(169) .askew {
+  -webkit-animation-duration: 1.11s;
+          animation-duration: 1.11s;
+  -webkit-animation-delay: -0.3996s;
+          animation-delay: -0.3996s;
+}
+
+.confetti:nth-child(169) .rotate {
+  -webkit-animation-duration: 1.53s;
+          animation-duration: 1.53s;
+  -webkit-animation-delay: -0.0765s;
+          animation-delay: -0.0765s;
+}
+
+.confetti:nth-child(170) .askew {
+  -webkit-animation-duration: 1.23s;
+          animation-duration: 1.23s;
+  -webkit-animation-delay: -0.2952s;
+          animation-delay: -0.2952s;
+}
+
+.confetti:nth-child(170) .rotate {
+  -webkit-animation-duration: 1.98s;
+          animation-duration: 1.98s;
+  -webkit-animation-delay: -1.782s;
+          animation-delay: -1.782s;
+}
+
+.confetti:nth-child(171) .askew {
+  -webkit-animation-duration: 1.04s;
+          animation-duration: 1.04s;
+  -webkit-animation-delay: -0.9256s;
+          animation-delay: -0.9256s;
+}
+
+.confetti:nth-child(171) .rotate {
+  -webkit-animation-duration: 1.52s;
+          animation-duration: 1.52s;
+  -webkit-animation-delay: -0.4256s;
+          animation-delay: -0.4256s;
+}
+
+.confetti:nth-child(172) .askew {
+  -webkit-animation-duration: 1.96s;
+          animation-duration: 1.96s;
+  -webkit-animation-delay: -1.7052s;
+          animation-delay: -1.7052s;
+}
+
+.confetti:nth-child(172) .rotate {
+  -webkit-animation-duration: 1.28s;
+          animation-duration: 1.28s;
+  -webkit-animation-delay: -0.3072s;
+          animation-delay: -0.3072s;
+}
+
+.confetti:nth-child(173) .askew {
+  -webkit-animation-duration: 1.66s;
+          animation-duration: 1.66s;
+  -webkit-animation-delay: -0.4648s;
+          animation-delay: -0.4648s;
+}
+
+.confetti:nth-child(173) .rotate {
+  -webkit-animation-duration: 1.17s;
+          animation-duration: 1.17s;
+  -webkit-animation-delay: -0.1872s;
+          animation-delay: -0.1872s;
+}
+
+.confetti:nth-child(174) .askew {
+  -webkit-animation-duration: 1.68s;
+          animation-duration: 1.68s;
+  -webkit-animation-delay: -0.1176s;
+          animation-delay: -0.1176s;
+}
+
+.confetti:nth-child(174) .rotate {
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
+  -webkit-animation-delay: -1.034s;
+          animation-delay: -1.034s;
+}
+
+.confetti:nth-child(175) .askew {
+  -webkit-animation-duration: 1.09s;
+          animation-duration: 1.09s;
+  -webkit-animation-delay: -0.8175s;
+          animation-delay: -0.8175s;
+}
+
+.confetti:nth-child(175) .rotate {
+  -webkit-animation-duration: 1.67s;
+          animation-duration: 1.67s;
+  -webkit-animation-delay: -0.6346s;
+          animation-delay: -0.6346s;
+}
+
+.confetti:nth-child(176) .askew {
+  -webkit-animation-duration: 1.59s;
+          animation-duration: 1.59s;
+  -webkit-animation-delay: -1.0017s;
+          animation-delay: -1.0017s;
+}
+
+.confetti:nth-child(176) .rotate {
+  -webkit-animation-duration: 1.68s;
+          animation-duration: 1.68s;
+  -webkit-animation-delay: -1.1256s;
+          animation-delay: -1.1256s;
+}
+
+.confetti:nth-child(177) .askew {
+  -webkit-animation-duration: 1.41s;
+          animation-duration: 1.41s;
+  -webkit-animation-delay: -0.3807s;
+          animation-delay: -0.3807s;
+}
+
+.confetti:nth-child(177) .rotate {
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+
+.confetti:nth-child(178) .askew {
+  -webkit-animation-duration: 1.97s;
+          animation-duration: 1.97s;
+  -webkit-animation-delay: -1.8124s;
+          animation-delay: -1.8124s;
+}
+
+.confetti:nth-child(178) .rotate {
+  -webkit-animation-duration: 1.39s;
+          animation-duration: 1.39s;
+  -webkit-animation-delay: -0.4587s;
+          animation-delay: -0.4587s;
+}
+
+.confetti:nth-child(179) .askew {
+  -webkit-animation-duration: 1.76s;
+          animation-duration: 1.76s;
+  -webkit-animation-delay: -0.528s;
+          animation-delay: -0.528s;
+}
+
+.confetti:nth-child(179) .rotate {
+  -webkit-animation-duration: 1.99s;
+          animation-duration: 1.99s;
+  -webkit-animation-delay: -1.7711s;
+          animation-delay: -1.7711s;
+}
+
+.confetti:nth-child(180) .askew {
+  -webkit-animation-duration: 1.86s;
+          animation-duration: 1.86s;
+  -webkit-animation-delay: -1.5252s;
+          animation-delay: -1.5252s;
+}
+
+.confetti:nth-child(180) .rotate {
+  -webkit-animation-duration: 1.23s;
+          animation-duration: 1.23s;
+  -webkit-animation-delay: -1.1439s;
+          animation-delay: -1.1439s;
+}
+
+.confetti:nth-child(181) .askew {
+  -webkit-animation-duration: 1.81s;
+          animation-duration: 1.81s;
+  -webkit-animation-delay: -1.7919s;
+          animation-delay: -1.7919s;
+}
+
+.confetti:nth-child(181) .rotate {
+  -webkit-animation-duration: 1.7s;
+          animation-duration: 1.7s;
+  -webkit-animation-delay: -1.7s;
+          animation-delay: -1.7s;
+}
+
+.confetti:nth-child(182) .askew {
+  -webkit-animation-duration: 1.66s;
+          animation-duration: 1.66s;
+  -webkit-animation-delay: -1.5106s;
+          animation-delay: -1.5106s;
+}
+
+.confetti:nth-child(182) .rotate {
+  -webkit-animation-duration: 1.25s;
+          animation-duration: 1.25s;
+  -webkit-animation-delay: -0.65s;
+          animation-delay: -0.65s;
+}
+
+.confetti:nth-child(183) .askew {
+  -webkit-animation-duration: 1.47s;
+          animation-duration: 1.47s;
+  -webkit-animation-delay: -1.1025s;
+          animation-delay: -1.1025s;
+}
+
+.confetti:nth-child(183) .rotate {
+  -webkit-animation-duration: 1.56s;
+          animation-duration: 1.56s;
+  -webkit-animation-delay: -0.1092s;
+          animation-delay: -0.1092s;
+}
+
+.confetti:nth-child(184) .askew {
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+  -webkit-animation-delay: -0.736s;
+          animation-delay: -0.736s;
+}
+
+.confetti:nth-child(184) .rotate {
+  -webkit-animation-duration: 1.53s;
+          animation-duration: 1.53s;
+  -webkit-animation-delay: -1.3005s;
+          animation-delay: -1.3005s;
+}
+
+.confetti:nth-child(185) .askew {
+  -webkit-animation-duration: 1.14s;
+          animation-duration: 1.14s;
+  -webkit-animation-delay: -0.8892s;
+          animation-delay: -0.8892s;
+}
+
+.confetti:nth-child(185) .rotate {
+  -webkit-animation-duration: 1.59s;
+          animation-duration: 1.59s;
+  -webkit-animation-delay: -1.3038s;
+          animation-delay: -1.3038s;
+}
+
+.confetti:nth-child(186) .askew {
+  -webkit-animation-duration: 1.08s;
+          animation-duration: 1.08s;
+  -webkit-animation-delay: -0.756s;
+          animation-delay: -0.756s;
+}
+
+.confetti:nth-child(186) .rotate {
+  -webkit-animation-duration: 1.46s;
+          animation-duration: 1.46s;
+  -webkit-animation-delay: -0.3796s;
+          animation-delay: -0.3796s;
+}
+
+.confetti:nth-child(187) .askew {
+  -webkit-animation-duration: 1.49s;
+          animation-duration: 1.49s;
+  -webkit-animation-delay: -0.7003s;
+          animation-delay: -0.7003s;
+}
+
+.confetti:nth-child(187) .rotate {
+  -webkit-animation-duration: 1.71s;
+          animation-duration: 1.71s;
+  -webkit-animation-delay: -1.4364s;
+          animation-delay: -1.4364s;
+}
+
+.confetti:nth-child(188) .askew {
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
+  -webkit-animation-delay: -0.836s;
+          animation-delay: -0.836s;
+}
+
+.confetti:nth-child(188) .rotate {
+  -webkit-animation-duration: 1.99s;
+          animation-duration: 1.99s;
+  -webkit-animation-delay: -1.9701s;
+          animation-delay: -1.9701s;
+}
+
+.confetti:nth-child(189) .askew {
+  -webkit-animation-duration: 1.36s;
+          animation-duration: 1.36s;
+  -webkit-animation-delay: -0.7616s;
+          animation-delay: -0.7616s;
+}
+
+.confetti:nth-child(189) .rotate {
+  -webkit-animation-duration: 1.99s;
+          animation-duration: 1.99s;
+  -webkit-animation-delay: -0.8955s;
+          animation-delay: -0.8955s;
+}
+
+.confetti:nth-child(190) .askew {
+  -webkit-animation-duration: 1.21s;
+          animation-duration: 1.21s;
+  -webkit-animation-delay: -0.8833s;
+          animation-delay: -0.8833s;
+}
+
+.confetti:nth-child(190) .rotate {
+  -webkit-animation-duration: 1.03s;
+          animation-duration: 1.03s;
+  -webkit-animation-delay: -0.3605s;
+          animation-delay: -0.3605s;
+}
+
+.confetti:nth-child(191) .askew {
+  -webkit-animation-duration: 1.96s;
+          animation-duration: 1.96s;
+  -webkit-animation-delay: -0.0392s;
+          animation-delay: -0.0392s;
+}
+
+.confetti:nth-child(191) .rotate {
+  -webkit-animation-duration: 1.49s;
+          animation-duration: 1.49s;
+  -webkit-animation-delay: -0.8493s;
+          animation-delay: -0.8493s;
+}
+
+.confetti:nth-child(192) .askew {
+  -webkit-animation-duration: 1.04s;
+          animation-duration: 1.04s;
+  -webkit-animation-delay: -0.1456s;
+          animation-delay: -0.1456s;
+}
+
+.confetti:nth-child(192) .rotate {
+  -webkit-animation-duration: 1.91s;
+          animation-duration: 1.91s;
+  -webkit-animation-delay: -1.6617s;
+          animation-delay: -1.6617s;
+}
+
+.confetti:nth-child(193) .askew {
+  -webkit-animation-duration: 1.12s;
+          animation-duration: 1.12s;
+  -webkit-animation-delay: -0.9632s;
+          animation-delay: -0.9632s;
+}
+
+.confetti:nth-child(193) .rotate {
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: -1.305s;
+          animation-delay: -1.305s;
+}
+
+.confetti:nth-child(194) .askew {
+  -webkit-animation-duration: 1.24s;
+          animation-duration: 1.24s;
+  -webkit-animation-delay: -0.1736s;
+          animation-delay: -0.1736s;
+}
+
+.confetti:nth-child(194) .rotate {
+  -webkit-animation-duration: 1.01s;
+          animation-duration: 1.01s;
+  -webkit-animation-delay: -0.3939s;
+          animation-delay: -0.3939s;
+}
+
+.confetti:nth-child(195) .askew {
+  -webkit-animation-duration: 1.41s;
+          animation-duration: 1.41s;
+  -webkit-animation-delay: -1.2831s;
+          animation-delay: -1.2831s;
+}
+
+.confetti:nth-child(195) .rotate {
+  -webkit-animation-duration: 1.19s;
+          animation-duration: 1.19s;
+  -webkit-animation-delay: -0.6426s;
+          animation-delay: -0.6426s;
+}
+
+.confetti:nth-child(196) .askew {
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-delay: -0.938s;
+          animation-delay: -0.938s;
+}
+
+.confetti:nth-child(196) .rotate {
+  -webkit-animation-duration: 1.12s;
+          animation-duration: 1.12s;
+  -webkit-animation-delay: -0.0112s;
+          animation-delay: -0.0112s;
+}
+
+.confetti:nth-child(197) .askew {
+  -webkit-animation-duration: 1.14s;
+          animation-duration: 1.14s;
+  -webkit-animation-delay: -0.2622s;
+          animation-delay: -0.2622s;
+}
+
+.confetti:nth-child(197) .rotate {
+  -webkit-animation-duration: 1.96s;
+          animation-duration: 1.96s;
+  -webkit-animation-delay: -1.6856s;
+          animation-delay: -1.6856s;
+}
+
+.confetti:nth-child(198) .askew {
+  -webkit-animation-duration: 1.14s;
+          animation-duration: 1.14s;
+  -webkit-animation-delay: -0.1482s;
+          animation-delay: -0.1482s;
+}
+
+.confetti:nth-child(198) .rotate {
+  -webkit-animation-duration: 1.11s;
+          animation-duration: 1.11s;
+  -webkit-animation-delay: -0.7659s;
+          animation-delay: -0.7659s;
+}
+
+.confetti:nth-child(199) .askew {
+  -webkit-animation-duration: 1.69s;
+          animation-duration: 1.69s;
+  -webkit-animation-delay: -1.6224s;
+          animation-delay: -1.6224s;
+}
+
+.confetti:nth-child(199) .rotate {
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+  -webkit-animation-delay: -0.162s;
+          animation-delay: -0.162s;
+}
+
+@-webkit-keyframes drift {
+  0% {
+    transform: skewY(10deg) translate3d(-250%, 0, 0);
+  }
+  100% {
+    transform: skewY(-10deg) translate3d(250%, 0, 0);
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: skewY(10deg) translate3d(-250%, 0, 0);
+  }
+  100% {
+    transform: skewY(-10deg) translate3d(250%, 0, 0);
+  }
+}
+@-webkit-keyframes driftRotate {
+  0% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+@keyframes driftRotate {
+  0% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
